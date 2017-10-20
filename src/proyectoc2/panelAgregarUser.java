@@ -149,11 +149,49 @@ public class panelAgregarUser extends JFrame implements ActionListener{
         
         
         }
-        }
+}
     public boolean validarDatos(){
-        if(!cedula.getText().trim().equals("") && !nombre.getText().trim().equals("") && !apellido.getText().trim().equals("")&& !saldo.getText().trim().equals("")&& !clave.getText().trim().equals("")){
+      if(!cedula.getText().trim().equals("") && !nombre.getText().trim().equals("") && !apellido.getText().trim().equals("")&& !saldo.getText().trim().equals("")&& !clave.getText().trim().equals("")){
             //validacion de datos y deshabilitar y hablitar componentes
-            
+    	  try{
+              int icedula = Integer.parseInt(cedula.getText().trim());
+          }catch(Exception error){
+              JOptionPane.showMessageDialog(null, "La cedula no es valida!");
+              return false;
+          }
+    	  int icedula = Integer.parseInt(cedula.getText().trim());
+    	  if(icedula<=0) {
+    		  JOptionPane.showMessageDialog(null, "La cedula no es valida son valores positivos!");
+    		  return false;
+    	  }
+    	  
+    	  
+    	  try{
+              int isaldo = Integer.parseInt(saldo.getText().trim());
+          }catch(Exception error){
+              JOptionPane.showMessageDialog(null, "el saldo no es valido!");
+              return false;
+          }
+    	  
+    	  int isaldo = Integer.parseInt(saldo.getText().trim());
+    	  if(isaldo<=0) {
+    		  JOptionPane.showMessageDialog(null, "el saldo no es valida son valores positivos!");
+    		  return false;
+    	  }
+    	  
+    	  
+    	  try{
+              int iclave = Integer.parseInt(clave.getText().trim());
+          }catch(Exception error){
+              JOptionPane.showMessageDialog(null, "La clave no es valida deve ser solo valores numericos!");
+              return false;
+          }
+    	  int iclave = Integer.parseInt(clave.getText().trim());
+    	  if(iclave<=0) {
+    		  JOptionPane.showMessageDialog(null, "la clave no es valida son valores positivos!");
+    		  return false;
+    	  }
+    	  
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");
             return false;
