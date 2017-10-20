@@ -15,10 +15,10 @@ import javax.swing.JTextField;
 public class PanelAbajo extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
 
-	private static JButton usuario,ok;
-	private static  JTextField cc,mensaje;
+	public static JButton usuario,ok;
+	public static  JTextField cc,mensaje;
 	private JLabel titulocc,titulomensaje;
-
+    public static int ban_in=0;
 	public PanelAbajo() {
 
 		 	setLayout( new GridBagLayout( ) );
@@ -73,10 +73,6 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        add( ok, constraint );
 	        
-	      
-	        
-	        ok.setEnabled(false);
-	        // arreglar las declaracions y agregacion de componentes
 	        
 	}
 	
@@ -87,14 +83,13 @@ public class PanelAbajo extends JPanel implements ActionListener{
 			  
 	        switch (e.getActionCommand()) {
 	            case "Agregar usuario":
-	               
 	                //desavilitar o habilitar componentes y validaciones
-	    
+	            	ban_in=1;
 	            	panelAgregarUser objeto2=new panelAgregarUser();
                     objeto2.setVisible(true);
-                  
-	
-	                
+	            break;
+	            case "ok":
+	            	
 	            break;
 		}
 

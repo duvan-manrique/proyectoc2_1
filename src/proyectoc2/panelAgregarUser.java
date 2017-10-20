@@ -140,6 +140,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
                 persona1.setsaldo(Integer.parseInt(saldo.getText().trim()));
                 persona1.setclave(Integer.parseInt(clave.getText().trim()));
                 proyectoc2.PanelCentro.l_personas.add(persona1);
+                proyectoc2.PanelAbajo.cc.setEditable(true);
                 nombre.setText("                 ");
                 apellido.setText("                 ");
                 saldo.setText("                 ");
@@ -157,7 +158,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
 }
     public boolean validarDatos(){
       if(!cedula.getText().trim().equals("") && !nombre.getText().trim().equals("") && !apellido.getText().trim().equals("")&& !saldo.getText().trim().equals("")&& !clave.getText().trim().equals("")){
-            // deshabilitar y hablitar componentes
+          
     	  try{
               int icedula = Integer.parseInt(cedula.getText().trim());
           }catch(Exception error){
@@ -168,6 +169,12 @@ public class panelAgregarUser extends JFrame implements ActionListener{
     	  if(icedula<=0) {
     		  JOptionPane.showMessageDialog(null, "La cedula no es valida son valores positivos!");
     		  return false;
+    	  }
+    	  for(int x=0;x<(proyectoc2.PanelCentro.l_personas.size());x++) {
+    		  if(icedula==(proyectoc2.PanelCentro.l_personas.get(x).getcedula())) {
+    			  JOptionPane.showMessageDialog(null, "La cedula ya existe!");
+    			  return false;
+    		  }
     	  }
     	  
     	  
