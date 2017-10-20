@@ -89,8 +89,8 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	        switch (e.getActionCommand()) {
 	            case "Agregar usuario":
 	               
-	                
-	            	
+	                //desavilitar o habilitar componentes y validaciones
+	    
 	            	panelAgregarUser objeto2=new panelAgregarUser();
                     objeto2.setVisible(true);
                   

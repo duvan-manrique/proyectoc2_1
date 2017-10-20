@@ -53,7 +53,7 @@ public class PanelCentro extends JPanel implements ActionListener{
             constraint.gridy =1;
             panelCentro. add( titulocontraseña, constraint );
             
-            JTextField contraseña=new  JPasswordField (" ");
+            JTextField contraseña=new  JPasswordField ("");
             this.add(contraseña);
             constraint.gridx = 1;
             constraint.gridy = 1;
@@ -224,6 +224,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		// validar eventos y declaracione habilitar de habilitar cosas mas manejo de botones e imagenes 
 		
 	}
 

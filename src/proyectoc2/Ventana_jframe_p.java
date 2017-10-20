@@ -15,8 +15,6 @@ public class Ventana_jframe_p extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L; 
-	
-	
 	PanelAbajo panelAbajo;
 	PanelCentro panelCentro;
 	panelArriba panelArriba;

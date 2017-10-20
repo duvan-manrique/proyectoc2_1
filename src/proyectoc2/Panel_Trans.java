@@ -128,7 +128,7 @@ public class Panel_Trans extends JFrame implements ActionListener{
         }
     public boolean validarDatos(){
         if(!ncuenta.getText().trim().equals("") && !nombre.getText().trim().equals("") && !valortrans.getText().trim().equals("")){
-            
+            // validacion clave + campos 
             
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");

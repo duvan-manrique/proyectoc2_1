@@ -84,16 +84,13 @@ public class Panel_Pagos extends JFrame implements ActionListener{
                 constraint.gridx =1;
                 constraint.gridy =3;
                 panel_p.add( empresa, constraint );
-	          	empresa.addItem("Amarillo");
-	          	empresa.addItem("Azul");
-	          	empresa.addItem("Rojo");
-	          	empresa.addItem("Blanco");
-	          	empresa.addItem("Negro");
-	          	empresa.addItem("lol");
-	          	
-          	  
-                
-             
+	          	empresa.addItem("Agua");
+	          	empresa.addItem("Luz");
+	          	empresa.addItem("Gas");
+	          	empresa.addItem("Telefoto");
+	          	empresa.addItem("Internet");
+	          	empresa.addItem("televicion");
+
                
                 this.add(panel_p);
     }
@@ -123,7 +120,7 @@ public class Panel_Pagos extends JFrame implements ActionListener{
         }
     public boolean validarDatos(){
         if(!nreferencia.getText().trim().equals("") && !valor.getText().trim().equals("") ){
-            
+            //validacion + variable de clave para todos 
             
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");

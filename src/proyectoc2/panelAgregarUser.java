@@ -39,10 +39,8 @@ public class panelAgregarUser extends JFrame implements ActionListener{
       
     }
    public JTextField cedula,nombre,apellido,saldo,clave;
-  // public JComboBox respuesta;
-   public JButton btnAgregar,btnFinalizar,btnrespuesta;
+   public JButton btnAgregar;
    public JLabel titulocedula,titulonombre,tituloapellido,titulosaldo,tituloclave;
-    //public F_cedulas f_cedulas;
     public JPanel panel_p;
     private void componentes() {
        panel_p  = new JPanel();
@@ -132,8 +130,6 @@ public class panelAgregarUser extends JFrame implements ActionListener{
         switch (e.getActionCommand()) {
             
             case"AGREGAR":
-                
-                
                 if(validarDatos()){    
               
                 nombre.setText("                 ");
@@ -151,7 +147,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
         }
     public boolean validarDatos(){
         if(!cedula.getText().trim().equals("") && !nombre.getText().trim().equals("") && !apellido.getText().trim().equals("")&& !saldo.getText().trim().equals("")&& !clave.getText().trim().equals("")){
-            
+            //validacion de datos y deshabilitar y hablitar componentes
             
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");

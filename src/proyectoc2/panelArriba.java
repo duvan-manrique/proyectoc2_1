@@ -140,7 +140,9 @@ int ban=1;
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		  
+		  /* validar habilitacion y des habilitar + cambios de imagesn y gestos de botonoes imagenes revisar orden 
+		   * 
+		   */
         switch (e.getActionCommand()) {
             case "imagen":
                 System.out.println("Se oprimio 2imagen");

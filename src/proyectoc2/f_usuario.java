@@ -6,14 +6,15 @@ public class f_usuario {
 
 
 
-    private String cedula, nombre, apellido, saldo, clave;
+    private String  nombre, apellido;
+    private int cedula, saldo, clave;
 
  
-    public String getcedula() {
+    public int getcedula() {
         return cedula;
     }
 
-    public void setcedula(String cedula) {
+    public void setcedula(int cedula) {
         this.cedula = cedula;
     }
     public String getnombre() {
@@ -31,22 +32,21 @@ public class f_usuario {
     public String getapellido() {
         return apellido;
     }
-    ///////
-    ///asdfgyhu
+   
     
-    public String getsaldo() {
+    public int getsaldo() {
         return saldo;
     }
 
-    public void setsaldo(String saldo) {
+    public void setsaldo(int saldo) {
         this.saldo = saldo;
     }
     
-    public void setclave(String clave) {
+    public void setclave(int clave) {
         this.clave = clave;
     }
     
-    public String getclave() {
+    public int getclave() {
         return clave;
     }
 
