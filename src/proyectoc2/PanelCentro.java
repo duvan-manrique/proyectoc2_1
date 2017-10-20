@@ -7,6 +7,8 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -35,7 +37,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	private  JButton salir;
 	private static JTextField contraseña;
 	private JLabel titulocontraseña;
-	      
+	public static List<f_usuario> l_personas =new ArrayList<>();      
 	
 	public PanelCentro(){
 			panelCentro = new JPanel( );

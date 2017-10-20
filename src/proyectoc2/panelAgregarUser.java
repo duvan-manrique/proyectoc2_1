@@ -130,16 +130,21 @@ public class panelAgregarUser extends JFrame implements ActionListener{
         switch (e.getActionCommand()) {
             
             case"AGREGAR":
-                if(validarDatos()){    
-              
+                if(validarDatos()){
+                f_usuario persona1 =new f_usuario();	
+                persona1.setapellido(apellido.getText().trim());
+                persona1.setnombre(nombre.getText().trim());
+                persona1.setcedula(Integer.parseInt(cedula.getText().trim()));
+                persona1.setsaldo(Integer.parseInt(saldo.getText().trim()));
+                persona1.setclave(Integer.parseInt(clave.getText().trim()));
+                proyectoc2.PanelCentro.l_personas.add(persona1);
                 nombre.setText("                 ");
                 apellido.setText("                 ");
                 saldo.setText("                 ");
                 clave.setText("                 ");
+                cedula.setText("                  ");
                 this.setVisible(false);
-     
                 }
-                
                 break;
         
         
