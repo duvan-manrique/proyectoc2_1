@@ -1,6 +1,7 @@
 package proyectoc2;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -17,22 +18,22 @@ public class PanelCentro extends JPanel implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
 	private JPanel panelCentro;
-	private static JButton n1;
-	private static JButton n2;
-	private static JButton n3;
-	private static JButton n4;
-	private static JButton n5;
-	private static JButton n6;
-	private static JButton n7;
-	private static JButton n8;
-	private static JButton n9;
-	private static JButton n0;
-	private static JButton gato;
-	private static JButton numeral;
-	private static JButton cancelar;
-	private static JButton limpiar;
-	private static JButton salir;
-	private static  JTextField contraseña;
+	private  JButton n1;
+	private  JButton n2;
+	private  JButton n3;
+	private  JButton n4;
+	private  JButton n5;
+	private  JButton n6;
+	private  JButton n7;
+	private  JButton n8;
+	private  JButton n9;
+	private  JButton n0;
+	private  JButton gato;
+	private  JButton numeral;
+	private  JButton cancelar;
+	private  JButton limpiar;
+	private  JButton salir;
+	private static JTextField contraseña;
 	private JLabel titulocontraseña;
 	      
 	
@@ -48,21 +49,18 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        
 	   
 	        titulocontraseña=new JLabel("contraseña");
-            this.add(titulocontraseña);
             constraint.gridx = 0;
             constraint.gridy =1;
             panelCentro. add( titulocontraseña, constraint );
             
-            JTextField contraseña=new  JPasswordField ("");
-            this.add(contraseña);
+            contraseña=new  JPasswordField ("");
+            contraseña.setEditable(false);
+            contraseña.setBackground(Color.white);
             constraint.gridx = 1;
             constraint.gridy = 1;
             panelCentro.add( contraseña, constraint );
 	        
-	      
-	        
-	        
-	        
+            
 	        n1 = new JButton( "  1  " );
 	        n1.addActionListener( this );
 	        constraint = new GridBagConstraints( );
@@ -187,7 +185,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        panelCentro.add( numeral, constraint );
 	        
-	        cancelar = new JButton( "  cancelar  " );
+	        cancelar = new JButton( "cancelar" );
 	        cancelar.addActionListener( this );
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 3;
@@ -197,7 +195,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        panelCentro.add( cancelar, constraint );
 
-	        limpiar = new JButton( "  limpiar  " );
+	        limpiar = new JButton( "limpiar" );
 	        limpiar.addActionListener( this );
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 3;
@@ -207,7 +205,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        panelCentro.add( limpiar, constraint );
 	        
-	        salir = new JButton( "  salir  " );
+	        salir = new JButton( "salir" );
 	        salir.addActionListener( this );
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 3;
@@ -223,8 +221,61 @@ public class PanelCentro extends JPanel implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		// validar eventos y declaracione habilitar de habilitar cosas mas manejo de botones e imagenes 
+		switch (e.getActionCommand().trim()) {
+			case "0":
+				contraseña.setText(contraseña.getText()+"0");
+			break;
+			
+			case "1":
+				contraseña.setText(contraseña.getText()+"1");
+			break;
+			
+			case "2":
+				contraseña.setText(contraseña.getText()+"2");
+			break;
+				
+			case "3":
+				contraseña.setText(contraseña.getText()+"3");
+			break;
+				
+			case "4":
+				contraseña.setText(contraseña.getText()+"4");
+			break;
+				
+			case "5":
+				contraseña.setText(contraseña.getText()+"5");
+			break;
+				
+			case "6":
+				contraseña.setText(contraseña.getText()+"6");
+			break;
+				
+			case "7":
+				contraseña.setText(contraseña.getText()+"7");
+			break;
+				
+			case "8":
+				contraseña.setText(contraseña.getText()+"8");
+			break;
+				
+			case "9":
+				contraseña.setText(contraseña.getText()+"9");
+			break;
+			
+			case "limpiar":
+				contraseña.setText("");
+			break;
+			case "cancelar":
+			//arreglar esto
+			break;
+
+			case "salir":
+			//salir del usuario
+			break;
+				
+			
+		
+		}
 		
 	}
 
