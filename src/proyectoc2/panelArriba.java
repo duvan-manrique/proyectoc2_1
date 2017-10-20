@@ -25,7 +25,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	private static JButton ok1_d;
 	private static JButton ok2_d;
 	private static JButton ok3_d;
-int ban=1;
+	int ban=1;
 	
 	public panelArriba() {
 		
@@ -138,6 +138,7 @@ int ban=1;
 		        ok2_d.setEnabled(false);
 		        ok3_d.setEnabled(false);
 	        
+		        
 	        
 	        
 	}

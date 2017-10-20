@@ -14,15 +14,15 @@ import javax.swing.JTextField;
 
 public class PanelAbajo extends JPanel implements ActionListener{
 	private static final long serialVersionUID = 1L;
-	public JPanel PanelAbajo;
+
 	private static JButton usuario,ok;
 	private static  JTextField cc,mensaje;
 	private JLabel titulocc,titulomensaje;
 
 	public PanelAbajo() {
-		 	PanelAbajo= new JPanel();
+
 		 	setLayout( new GridBagLayout( ) );
-		 	
+
 	        GridBagConstraints constraint = new GridBagConstraints( );
 	        constraint.gridx = 0;
 	        constraint.gridy = 0;
@@ -32,12 +32,10 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	       
 	        
 	        titulocc=new JLabel("inserte tarjeta ");
-            this.add(titulocc);
             constraint.gridx = 2;
             constraint.gridy = 1;
-             add( titulocc, constraint );
-            JTextField cc=new JTextField("       cc          ");
-            this.add(cc);
+            add( titulocc, constraint );
+            cc=new JTextField("       cc          ");
             cc.setEditable(false);
             constraint.gridx = 2;
             constraint.gridy = 2;
@@ -45,12 +43,10 @@ public class PanelAbajo extends JPanel implements ActionListener{
             
 		
             titulomensaje=new JLabel("retire su dinero ");
-            this.add(titulomensaje);
             constraint.gridx = 0;
             constraint.gridy = 1;
              add( titulomensaje, constraint );
-            JTextField mensaje=new JTextField("  mensaje de aplicacion       ");
-            this.add(mensaje);
+           mensaje=new JTextField("  mensaje de aplicacion       ");
             mensaje.setBackground(Color.WHITE);
             mensaje.setEditable(false);
             constraint.gridx = 0;
@@ -77,7 +73,7 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        add( ok, constraint );
 	        
-	        add(PanelAbajo);
+	      
 	        
 	        ok.setEnabled(false);
 	        // arreglar las declaracions y agregacion de componentes
