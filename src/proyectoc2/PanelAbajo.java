@@ -1,6 +1,7 @@
 package proyectoc2;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -42,6 +43,7 @@ public class PanelAbajo extends JPanel implements ActionListener{
              add( titulocc, constraint );
             JTextField cc=new JTextField("       cc          ");
             this.add(cc);
+            cc.setEditable(false);
             constraint.gridx = 2;
             constraint.gridy = 2;
             add( cc, constraint );
@@ -54,6 +56,8 @@ public class PanelAbajo extends JPanel implements ActionListener{
              add( titulomensaje, constraint );
             JTextField mensaje=new JTextField("  mensaje de aplicacion       ");
             this.add(mensaje);
+            mensaje.setBackground(Color.WHITE);
+            mensaje.setEditable(false);
             constraint.gridx = 0;
             constraint.gridy = 2;
             add( mensaje, constraint );
@@ -79,6 +83,10 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	        add( ok, constraint );
 	        
 	        add(PanelAbajo);
+	        
+	        ok.setEnabled(false);
+	        // arreglar las declaracions y agregacion de componentes
+	        
 	}
 	
 	
