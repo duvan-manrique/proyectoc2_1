@@ -131,7 +131,12 @@ int ban=1;
 		        panel.add(panelCentro,BorderLayout.CENTER);
 		        panel.add(panelDerecho,BorderLayout.WEST);
 		       
-		        
+		        ok1_i.setEnabled(false);
+		        ok2_i.setEnabled(false);
+		        ok3_i.setEnabled(false);
+		        ok1_d.setEnabled(false);
+		        ok2_d.setEnabled(false);
+		        ok3_d.setEnabled(false);
 	        
 	        
 	        
