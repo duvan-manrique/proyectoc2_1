@@ -19,22 +19,22 @@ import javax.swing.JTextField;
 public class PanelCentro extends JPanel implements ActionListener{
 
 	private static final long serialVersionUID = 1L;
-	private JPanel panelCentro;
-	private  JButton n1;
-	private  JButton n2;
-	private  JButton n3;
-	private  JButton n4;
-	private  JButton n5;
-	private  JButton n6;
-	private  JButton n7;
-	private  JButton n8;
-	private  JButton n9;
-	private  JButton n0;
-	private  JButton gato;
-	private  JButton numeral;
-	private  JButton cancelar;
-	private  JButton limpiar;
-	private  JButton salir;
+	private static JPanel panelCentro;
+	private static  JButton n1;
+	private static JButton n2;
+	private static JButton n3;
+	private static JButton n4;
+	private static JButton n5;
+	private static JButton n6;
+	private static JButton n7;
+	private static JButton n8;
+	private static JButton n9;
+	private static JButton n0;
+	private static JButton gato;
+	private static JButton numeral;
+	private static JButton cancelar;
+	private static JButton limpiar;
+	private static JButton salir;
 	private static JTextField contraseña;
 	private JLabel titulocontraseña;
 	public static List<f_usuario> l_personas =new ArrayList<>();      
@@ -216,8 +216,22 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        insets = new Insets( 5, 10, 5, 10 );
 	        constraint.insets = insets;	        
 	        panelCentro.add( salir, constraint );
-	        
 	        add(panelCentro);
+	        n1.setEnabled(false);
+	        n2.setEnabled(false);
+	        n3.setEnabled(false);
+	        n4.setEnabled(false);
+	        n5.setEnabled(false);
+	        n6.setEnabled(false);
+	        n7.setEnabled(false);
+	        n8.setEnabled(false);
+	        n9.setEnabled(false);
+	        n0.setEnabled(false);
+	        salir.setEnabled(false);
+	        cancelar.setEnabled(false);
+	        limpiar.setEnabled(false);
+	        gato.setEnabled(false);
+	        numeral.setEnabled(false);
 	}
 
 

@@ -152,7 +152,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
 }
     public boolean validarDatos(){
       if(!cedula.getText().trim().equals("") && !nombre.getText().trim().equals("") && !apellido.getText().trim().equals("")&& !saldo.getText().trim().equals("")&& !clave.getText().trim().equals("")){
-            //validacion de datos y deshabilitar y hablitar componentes
+            // deshabilitar y hablitar componentes
     	  try{
               int icedula = Integer.parseInt(cedula.getText().trim());
           }catch(Exception error){
