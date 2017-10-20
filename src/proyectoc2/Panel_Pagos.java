@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -21,7 +20,11 @@ import javax.swing.border.Border;
 
 public class Panel_Pagos extends JFrame implements ActionListener{
   
-     Panel_Pagos (){
+     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	Panel_Pagos (){
         iniciar();
         componentes();
         setVisible(true);

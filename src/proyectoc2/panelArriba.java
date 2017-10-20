@@ -14,6 +14,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class panelArriba extends JPanel implements ActionListener {
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel panelCentro1,panelCentro2,panelCentro3;
 	private JPanel panelCentro;
 	private JPanel panelIzquierdo;
