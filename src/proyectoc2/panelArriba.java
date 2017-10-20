@@ -19,12 +19,12 @@ public class panelArriba extends JPanel implements ActionListener {
 	private JPanel panelIzquierdo;
 	private JPanel panelDerecho;
 	private JPanel panel;
-	private static JButton ok1_i;
-	private static JButton ok2_i;
-	private static JButton ok3_i;
-	private static JButton ok1_d;
-	private static JButton ok2_d;
-	private static JButton ok3_d;
+	public static JButton ok1_i;
+	public static JButton ok2_i;
+	public static JButton ok3_i;
+	public static JButton ok1_d;
+	public static JButton ok2_d;
+	public static JButton ok3_d;
 	int ban=1;
 	
 	public panelArriba() {

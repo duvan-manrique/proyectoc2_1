@@ -18,24 +18,24 @@ import javax.swing.JTextField;
 
 public class PanelCentro extends JPanel implements ActionListener{
 
-	private static final long serialVersionUID = 1L;
-	private static JPanel panelCentro;
-	private static  JButton n1;
-	private static JButton n2;
-	private static JButton n3;
-	private static JButton n4;
-	private static JButton n5;
-	private static JButton n6;
-	private static JButton n7;
-	private static JButton n8;
-	private static JButton n9;
-	private static JButton n0;
-	private static JButton gato;
-	private static JButton numeral;
-	private static JButton cancelar;
-	private static JButton limpiar;
-	private static JButton salir;
-	private static JTextField contraseña;
+	public static final long serialVersionUID = 1L;
+	public static JPanel panelCentro;
+	public static  JButton n1;
+	public static JButton n2;
+	public static JButton n3;
+	public static JButton n4;
+	public static JButton n5;
+	public static JButton n6;
+	public static JButton n7;
+	public static JButton n8;
+	public static JButton n9;
+	public static JButton n0;
+	public static JButton gato;
+	public static JButton numeral;
+	public static JButton cancelar;
+	public static JButton limpiar;
+	public static JButton salir;
+	public static JTextField contraseña;
 	private JLabel titulocontraseña;
 	public static List<f_usuario> l_personas =new ArrayList<>();      
 	
