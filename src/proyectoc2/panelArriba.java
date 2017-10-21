@@ -259,6 +259,7 @@ public class panelArriba extends JPanel implements ActionListener {
           case "ok1":
         	  proyectoc2.PanelAbajo.mensaje.setText("no olvide, retire su dinero");
           	if(ban==1) {
+          		ok3_d.setEnabled(true);
 				        panelCentro2.setVisible(false);
 				        panelCentro3.setVisible(true);
 				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
@@ -266,6 +267,7 @@ public class panelArriba extends JPanel implements ActionListener {
 				        ok3_d.setEnabled(true);
           	}else {
           		  if(ban==2) {
+          			ok3_d.setEnabled(false);
           			retiros=600000;
           			ban=1;
 				        panelCentro3.setVisible(false);
@@ -320,7 +322,8 @@ public class panelArriba extends JPanel implements ActionListener {
 	  				        panelCentro2.setVisible(true);
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
           		  }
-          	}  
+          	}
+          	//ok3_d.setEnabled(false);
           break;
           
           case "ok2":
@@ -430,6 +433,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
           		} 
           	}  
+          	ok3_d.setEnabled(false);
           break;
           
           case "ok3":
@@ -522,6 +526,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
           		  }
           	}  
+          	ok3_d.setEnabled(false);
           break;
           case "ok4":
         	  proyectoc2.PanelAbajo.mensaje.setText("pagos no olvide su tarjeta");
@@ -611,6 +616,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
           		 }
           	}  
+          	ok3_d.setEnabled(false);
           break;
           case "ok5":
         	  proyectoc2.PanelAbajo.mensaje.setText("cambio de clave, no la olvide");
@@ -704,6 +710,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
           		 }
           	}  
+          	ok3_d.setEnabled(false);
           break;
           case "ok6":
           	 retiros=20000;
@@ -759,6 +766,7 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro12.setVisible(false);
 				        panelCentro2.setVisible(true);
 				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
+				        ok3_d.setEnabled(false);
           break;
 	}
 
