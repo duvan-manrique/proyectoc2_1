@@ -80,6 +80,8 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	}
 	
 	private int cedula=0;
+	public static int bandera_ok=0,encontro;
+	
 	
 	public void actionPerformed(ActionEvent e) {
 	
@@ -106,6 +108,7 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            			for(int y=0;y<(proyectoc2.PanelCentro.l_personas.size());y++) {
 	            				if((cedula)==(proyectoc2.PanelCentro.l_personas.get(y).getcedula())) {
 	            					ban_in=2;
+	            					encontro=y;
 	            				}
 	            				
 	            			}
@@ -131,7 +134,7 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            					usuario.setEnabled(false);
 	            					
 	            					 JLabel imagen2 = new JLabel( );
-	            				        ImageIcon icono2 = new ImageIcon("imagenes/2p.PNG" );
+	            				        ImageIcon icono2 = new ImageIcon("imagenes/4p.PNG" );
 	            				        imagen2.setIcon( icono2 );
 	            				        imagen2.setAlignmentX(CENTER_ALIGNMENT);
 	            				        
@@ -145,10 +148,30 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            				        proyectoc2.panelArriba.ok2_d.setEnabled(true);
 	            				        
 	            				        proyectoc2.PanelAbajo.cc.setEditable(false);
+	            				        ban_in=3;
 	            				        
 	            				}
 	            			}
 	            			
+	            		}else {
+	            			if(ban_in==3) {
+	            				
+	            				try {
+	            					if((Integer.parseInt(proyectoc2.PanelCentro.contraseña.getText()))==(proyectoc2.PanelCentro.l_personas.get(encontro).getclave())) {
+		            					proyectoc2.PanelAbajo.bandera_ok=1;
+		            				}else {
+		            					 JOptionPane.showMessageDialog(null, "contraseña incorrecta!");
+		            				}
+	            				}catch(Exception error) {
+	            					
+	            					
+	            				}
+	            				
+	            				
+	            				
+	            				
+	            				
+	            			}
 	            		}
 	            		
 	            		

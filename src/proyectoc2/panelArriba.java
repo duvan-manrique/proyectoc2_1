@@ -31,8 +31,8 @@ public class panelArriba extends JPanel implements ActionListener {
 	public static JButton ok1_d;
 	public static JButton ok2_d;
 	public static JButton ok3_d;
-	int ban=1;
-	
+	static int ban=1;
+	static int retiros=0;
 	public panelArriba() {
 		
 		panelIzquierdo = new JPanel( );
@@ -173,54 +173,111 @@ public class panelArriba extends JPanel implements ActionListener {
 				        ok3_d.setEnabled(true);
             	}else {
             		  if(ban==2) {
-            			   
+            			  retiros=600000;
+            			  ban=1;
+            			JLabel imagen3 = new JLabel( );
+  				        ImageIcon icono3 = new ImageIcon("imagenes/8p.PNG" );
+  				        imagen3.setIcon( icono3 );
+  				        imagen3.setAlignmentX(CENTER_ALIGNMENT);
+  				        
+  				        panelCentro3.add( imagen3, BorderLayout.NORTH );
+  				        panelCentro2.setVisible(false);
+  				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+            			while(true) {
+            				if(proyectoc2.PanelAbajo.bandera_ok==1) {
+            					break;
+            				}
+            			}
+            			
+            			if(retiros<=(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
+            				JLabel imagen1 = new JLabel( );
+      				        ImageIcon icono1 = new ImageIcon("imagenes/11p.PNG" );
+      				        imagen1.setIcon( icono1 );
+      				        imagen1.setAlignmentX(CENTER_ALIGNMENT);
+      				        panelCentro3.add( imagen1, BorderLayout.NORTH );
+      				        panelCentro2.setVisible(false);
+      				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+      				        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-retiros);
+            			}else {
+            				
+            			}
+            			
+            			
+  				        
             			  
             		  }
             	}  
             break;
             
             case "ok2":
-            	if(ban==2) {/// ojo la bandera es solo prueba toca con clave
-            		  System.out.println("consulta de saldo");
-
+            	if(ban==1) {/// ban==3 consulta de saldo
+            		JLabel imagen3 = new JLabel( );
+			        ImageIcon icono3 = new ImageIcon("imagenes/8p.PNG" );
+			        imagen3.setIcon( icono3 );
+			        imagen3.setAlignmentX(CENTER_ALIGNMENT);
+			        
+			        panelCentro3.add( imagen3, BorderLayout.NORTH );
+			        panelCentro2.setVisible(false);
+			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+			        ban=3;
+			        ok1_i.setEnabled(false);
+			        ok2_i.setEnabled(false);
+			        ok3_i.setEnabled(false);
+			        ok1_d.setEnabled(false);
+			        ok2_d.setEnabled(false);
+			        ok3_d.setEnabled(false);
+			        while(true) {
+			        	if(proyectoc2.PanelAbajo.bandera_ok==1) {
+			        		break;
+			        	}
+			        }
+			        proyectoc2.PanelAbajo.bandera_ok=0;
+			        
+			        
+			        
                
             	}else {
-            		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
+            		if(ban==2) {
+            			retiros=400000;
+            		} 
             	}  
             break;
             
             case "ok3":
-            	if(ban==2) {/// ojo la bandera es solo prueba toca con clave
+            	if(ban==4) {/// ojo la bandera es solo prueba toca con clave
             		System.out.println("trnsferencia");   
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
             	}else {
-            		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
+            		  if(ban==2) {
+            			  retiros=200000;
+            		  }
             	}  
             break;
             case "ok4":
-            	if(ban==2) {/// ojo la bandera es solo prueba toca con pagos
+            	if(ban==5) {/// ojo la bandera es solo prueba toca con pagos
             		System.out.println("pagos");   
             		Panel_Pagos objeto3=new Panel_Pagos();
                     objeto3.setVisible(true);
             	}else {
-            		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
+            		 if(ban==2) {
+            			 retiros=100000;
+            		 }
             	}  
             break;
             case "ok5":
-            	if(ban==2) {/// ojo la bandera es solo prueba toca con pagos
+            	if(ban==6) {/// ojo la bandera es solo prueba toca con pagos
             		System.out.println("pagos");   
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
             	}else {
-            		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
+            		 if(ban==2) {
+            			 retiros=50000;
+            		 }
             	}  
             break;
             case "ok6":
-                System.out.println("Se oprimio 2imagen");
-               
-                ban=2;
-     
+            	 retiros=20000;
             break;
 	}
 
