@@ -342,6 +342,7 @@ public class PanelCentro extends JPanel implements ActionListener{
     	        	System.out.println("no serro por que no existe");
     	        }
     	        
+    	        proyectoc2.PanelAbajo.ban_in=1;
     	  
 			break;
 				

@@ -136,6 +136,7 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            					
 	            				       
 	            				        proyectoc2.panelArriba.panelCentro1.setVisible(false);
+	            				        proyectoc2.panelArriba.panelCentro2.setVisible(true);
 	            				        proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro2,BorderLayout.NORTH);
 	            				        proyectoc2.panelArriba.ok1_i.setEnabled(true);
 	            				        proyectoc2.panelArriba.ok2_i.setEnabled(true);
