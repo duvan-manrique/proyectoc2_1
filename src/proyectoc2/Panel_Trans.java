@@ -114,7 +114,7 @@ public class Panel_Trans extends JFrame implements ActionListener{
             case"finalizar transferencia":
                 
                 if(validarDatos()){    
-                	proyectoc2.panelArriba.panelCentro2.setVisible(false);
+                	proyectoc2.panelArriba.panelCentro4.setVisible(false);
                 	proyectoc2.panelArriba.panelCentro7.setVisible(true);
                 	proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro7,BorderLayout.NORTH);
 			        	

@@ -248,6 +248,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	        
 	}
 
+	@SuppressWarnings("unlikely-arg-type")
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
@@ -273,9 +274,16 @@ public class panelArriba extends JPanel implements ActionListener {
   				        panelCentro3.setVisible(false);
   				        panelCentro4.setVisible(true);
   				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
-  				        
-  				     
-  				      //validar clave
+  				        String pass="";
+  				        int pass1=0;
+  				        do{
+  				        	
+  				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+  				        	pass1=Integer.parseInt(pass);
+  				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+  				        	System.out.println(pass);
+  				        	
+  				        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
   			        proyectoc2.PanelAbajo.bandera_ok=0;
             			
             			if(retiros<=(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
@@ -339,6 +347,19 @@ public class panelArriba extends JPanel implements ActionListener {
 			        ok1_d.setEnabled(false);
 			        ok2_d.setEnabled(false);
 			        ok3_d.setEnabled(false);
+			        String pass="";
+				        int pass1=0;
+				        panelCentro2.setVisible(false);
+				        panelCentro4.setVisible(true);
+				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
+				        do{
+				        	
+				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+				        	pass1=Integer.parseInt(pass);
+				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+				        	System.out.println(pass);
+				        	
+				        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
                     proyectoc2.PanelCentro.cerradotrans=objeto3;
