@@ -20,8 +20,8 @@ public class panelArriba extends JPanel implements ActionListener {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JPanel panelCentro1,panelCentro2,panelCentro3;
-	private JPanel panelCentro;
+	public static JPanel panelCentro1,panelCentro2,panelCentro3;
+	public static JPanel panelCentro;
 	private JPanel panelIzquierdo;
 	private JPanel panelDerecho;
 	private JPanel panel;
@@ -157,17 +157,11 @@ public class panelArriba extends JPanel implements ActionListener {
 		   */
         switch (e.getActionCommand()) {
             case "imagen":
+            	
                 System.out.println("Se oprimio 2imagen");
                
                 ban=2;
-                JLabel imagen2 = new JLabel( );
-		        ImageIcon icono2 = new ImageIcon("imagenes/2p.PNG" );
-		        imagen2.setIcon( icono2 );
-		        imagen2.setAlignmentX(CENTER_ALIGNMENT);
-		        
-		        panelCentro2.add( imagen2, BorderLayout.NORTH );
-		        panelCentro1.setVisible(false);
-		        panelCentro.add(panelCentro2,BorderLayout.NORTH);
+               
 		        
                 
             break;
