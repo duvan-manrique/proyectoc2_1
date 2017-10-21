@@ -117,7 +117,7 @@ public class panelArriba extends JPanel implements ActionListener {
 
 		panelCentro10 = new JPanel( );
 			JLabel imagen10 = new JLabel( );
-			ImageIcon icono10 = new ImageIcon("imagenes/nuevacontraseña.PNG" );
+			ImageIcon icono10 = new ImageIcon("imagenes/nuevacontraseï¿½a.PNG" );
 	        imagen10.setIcon( icono10 );
 	        imagen10.setAlignmentX(CENTER_ALIGNMENT);
 	        panelCentro10.add( imagen10, BorderLayout.NORTH );
@@ -258,9 +258,6 @@ public class panelArriba extends JPanel implements ActionListener {
             
             case "ok1":
             	if(ban==1) {
-            		  System.out.println("retiro en efectivo");
-		                System.out.println("Se oprimio 3imagen");
-		          
 				        panelCentro2.setVisible(false);
 				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
 				        ban=2;
@@ -279,35 +276,24 @@ public class panelArriba extends JPanel implements ActionListener {
   				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
   				        
   				     
-  				      
+  				      //validar clave
   			        proyectoc2.PanelAbajo.bandera_ok=0;
             			
             			if(retiros<=(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
-            				JLabel imagen1 = new JLabel( );
-      				        ImageIcon icono1 = new ImageIcon("imagenes/11p.PNG" );
-      				        imagen1.setIcon( icono1 );
-      				        imagen1.setAlignmentX(CENTER_ALIGNMENT);
-      				        panelCentro3.add( imagen1, BorderLayout.NORTH );
-      				        panelCentro2.setVisible(false);
-      				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+            				
+      				       
+      				        panelCentro4.setVisible(false);
+      				        panelCentro.add(panelCentro5,BorderLayout.NORTH);
       				        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-retiros);
             			}else {
-            				JLabel imagen2 = new JLabel( );
-      				        ImageIcon icono2 = new ImageIcon("imagenes/12p.PNG" );
-      				        imagen2.setIcon( icono2 );
-      				        imagen2.setAlignmentX(CENTER_ALIGNMENT);
-      				        panelCentro3.add( imagen2, BorderLayout.NORTH );
-      				        panelCentro2.setVisible(false);
-      				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+            				
+      				        panelCentro4.setVisible(false);
+      				        panelCentro.add(panelCentro12,BorderLayout.NORTH);
       				        JOptionPane.showMessageDialog(null, "saldo insuficiente");
             			}
-	            			JLabel imagen4 = new JLabel( );
-	  				        ImageIcon icono4 = new ImageIcon("imagenes/4p.PNG" );
-	  				        imagen4.setIcon( icono4 );
-	  				        imagen4.setAlignmentX(CENTER_ALIGNMENT);
-	  				        panelCentro3.add( imagen4, BorderLayout.NORTH );
-	  				        panelCentro2.setVisible(false);
-	  				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+            				panelCentro5.setVisible(false);
+	  				        panelCentro12.setVisible(false);
+	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
             		  }
             	}  
             break;
