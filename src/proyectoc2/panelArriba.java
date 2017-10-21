@@ -306,31 +306,45 @@ public class panelArriba extends JPanel implements ActionListener {
             break;
             
             case "ok2":
-            	if(ban==1) {/// ban==3 consulta de saldo
-            		JLabel imagen3 = new JLabel( );
-			        ImageIcon icono3 = new ImageIcon("imagenes/8p.PNG" );
-			        imagen3.setIcon( icono3 );
-			        imagen3.setAlignmentX(CENTER_ALIGNMENT);
+            	if(ban==1) {
+            		
 			        
-			        panelCentro3.add( imagen3, BorderLayout.NORTH );
+			        
 			        panelCentro2.setVisible(false);
-			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
-			        ban=3;
+			        panelCentro4.setVisible(true);
+			        panelCentro.add(panelCentro4,BorderLayout.NORTH);
+			       
 			        ok1_i.setEnabled(false);
 			        ok2_i.setEnabled(false);
 			        ok3_i.setEnabled(false);
 			        ok1_d.setEnabled(false);
 			        ok2_d.setEnabled(false);
 			        ok3_d.setEnabled(false);
-			        while(true) {
-			        	if(proyectoc2.PanelAbajo.bandera_ok==1) {
-			        		break;
-			        	}
-			        }
-			        proyectoc2.PanelAbajo.bandera_ok=0;
 			        
-			        
-			        
+			        String pass="";
+				        int pass1=0;
+				        do{
+				        	
+				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+				        	pass1=Integer.parseInt(pass);
+				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+				        	System.out.println(pass);
+				        	
+				        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
+				        
+				        panelCentro4.setVisible(false);
+				        panelCentro6.setVisible(true);
+				        panelCentro.add(panelCentro6,BorderLayout.NORTH);
+				        JOptionPane.showMessageDialog(null, "saldo :"+proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo());
+				        panelCentro6.setVisible(false);
+				        panelCentro2.setVisible(true);
+				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
+				        ok1_i.setEnabled(true);
+				        ok2_i.setEnabled(true);
+				        ok3_i.setEnabled(true);
+				        ok1_d.setEnabled(true);
+				        ok2_d.setEnabled(true);
+				        
                
             	}else {
             		if(ban==2) {
@@ -433,72 +447,9 @@ public class panelArriba extends JPanel implements ActionListener {
             		  }
             	} 
             	
-            	////////////
+            
             	
-            case "ok2":
-
-            	if(ban==1) {
-            					
-            				        
-            				        
-            				        panelCentro2.setVisible(false);
-            				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
-            				      
-            				        ok1_i.setEnabled(false);
-            				        ok2_i.setEnabled(false);
-            				        ok3_i.setEnabled(false);
-            				        ok1_d.setEnabled(false);
-            				        ok2_d.setEnabled(false);
-            				        ok3_d.setEnabled(false);
-            					    panelCentro4.setVisible(true);
-            					    
-            					    
-            					    
-            					     panelCentro6.setVisible(true);   
-            					      
-            					     panelCentro.add(panelCentro6,BorderLayout.NORTH);
-
-            				
-
-
-
-            	            	}else {
-
-            	            		  if(ban==2) {
-            	            			retiros=40000;
-            	            			ban=1;
-
-            	  				      //validar clave
-            	  			        proyectoc2.PanelAbajo.bandera_ok=0;
-            	            			
-            	            			if(retiros<=(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
-            	            				
-            	      				       
-            	      				        panelCentro4.setVisible(false);
-            	      				        panelCentro2.setVisible(true);
-            	      				        panelCentro.add(panelCentro5,BorderLayout.NORTH);
-            	      				        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-retiros);
-            	            			}else {
-            	            				
-            	      				        panelCentrop4.setVisible(false);
-            	      				        panelCentro4.setVisible(true);
-            	      				        panelCentro.add(panelCentro12,BorderLayout.NORTH);
-            	      				        JOptionPane.showMessageDialog(null, "saldo insuficiente");
-            	            			}
-            	            				panelCentro6.setVisible(false);
-            		  				        panelCentro12.setVisible(false);
-            		  				        panelCentro2.setVisible(true);
-            		  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
-            	            		  }
-            	            	}  
-
-
-            	            break;
-            	
-            	/////////////////
-            	
-            	
-            	
+           
             	
             break;
             case "ok4":
