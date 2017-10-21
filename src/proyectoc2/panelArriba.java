@@ -36,7 +36,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	
 	
 	public String  c1="ok1",c2="ok2";
-    public String c3="ok3",c4="4", c5="ok5",c6="ok6";
+    public String c3="ok3",c4="ok4", c5="ok5",c6="ok6";
 
 	
 	
