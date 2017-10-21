@@ -531,7 +531,28 @@ public class panelArriba extends JPanel implements ActionListener {
           break;
           case "ok5":
           	if(ban==1) {
-          		//clave
+          		//clave  (proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+          			panelCentro2.setVisible(false);
+			        panelCentro4.setVisible(true);
+			        panelCentro.add(panelCentro4,BorderLayout.NORTH);
+          		
+          		String pass="";
+			        int pass1=0;
+			        do{
+			        	
+			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	pass1=Integer.parseInt(pass);
+			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+			        	System.out.println(pass);
+			        	
+			        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
+			        pass=(JOptionPane.showInputDialog(" nueva password: ").trim());
+		        	pass1=Integer.parseInt(pass);
+			        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setclave(pass1);
+			        panelCentro4.setVisible(false);
+				        panelCentro2.setVisible(true);
+				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
+          		
           	}else {
           		 if(ban==2) {
           			 retiros=50000;
