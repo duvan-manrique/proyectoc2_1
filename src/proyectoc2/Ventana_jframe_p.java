@@ -1,6 +1,7 @@
 package proyectoc2;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
@@ -49,10 +50,13 @@ public void componente() {
 
         panelCentro = new PanelCentro( );
         add( panelCentro, BorderLayout.CENTER);
+        panelCentro.setBackground(Color.blue);
         panelArriba =new panelArriba();
         add(panelArriba,BorderLayout.PAGE_START );
+        panelArriba.setBackground(Color.blue);
         panelAbajo = new PanelAbajo();
         add( panelAbajo, BorderLayout.SOUTH );
+        
 
         
 

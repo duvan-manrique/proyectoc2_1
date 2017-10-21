@@ -117,7 +117,7 @@ public class Panel_Trans extends JFrame implements ActionListener{
                 	proyectoc2.panelArriba.panelCentro4.setVisible(false);
                 	proyectoc2.panelArriba.panelCentro7.setVisible(true);
                 	proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro7,BorderLayout.NORTH);
-			        	
+			        proyectoc2.panelArriba.registro+=("\n"+"usuario("+((proyectoc2.PanelAbajo.encontro)+1)+")"+nombre.getText().trim()+"-- valor: "+valortrans.getText().trim());	
                 proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-(Integer.parseInt(valortrans.getText().trim())));	
                 nombre.setText("                 ");
                 valortrans.setText("                 ");
