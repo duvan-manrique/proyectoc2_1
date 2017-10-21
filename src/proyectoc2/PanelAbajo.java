@@ -133,12 +133,8 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            					proyectoc2.PanelCentro.numeral.setEnabled(true);
 	            					usuario.setEnabled(false);
 	            					
-	            					 JLabel imagen2 = new JLabel( );
-	            				        ImageIcon icono2 = new ImageIcon("imagenes/4p.PNG" );
-	            				        imagen2.setIcon( icono2 );
-	            				        imagen2.setAlignmentX(CENTER_ALIGNMENT);
-	            				        
-	            				        proyectoc2.panelArriba.panelCentro2.add( imagen2, BorderLayout.NORTH );
+	            					
+	            				       
 	            				        proyectoc2.panelArriba.panelCentro1.setVisible(false);
 	            				        proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro2,BorderLayout.NORTH);
 	            				        proyectoc2.panelArriba.ok1_i.setEnabled(true);
