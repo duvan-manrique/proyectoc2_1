@@ -24,7 +24,7 @@ public class Panel_Trans extends JFrame implements ActionListener{
      /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+	public static final long serialVersionUID = 1L;
 	Panel_Trans (){
         iniciar();
         componentes();

@@ -37,7 +37,13 @@ public class PanelCentro extends JPanel implements ActionListener{
 	public static JTextField contraseña;
 	private JLabel titulocontraseña;
 	public static List<f_usuario> l_personas =new ArrayList<>();      
-	
+	public static Panel_Trans cerradotrans;
+	public static Panel_Pagos cerrarpagos;
+	/*
+	public void referencia(Panel_Trans _cerradotrans) {
+		cerradotrans=_cerradotrans;
+	}
+	*/
 	public PanelCentro(){
 			panelCentro = new JPanel( );
 			panelCentro.setLayout( new GridBagLayout( ) );
@@ -282,10 +288,61 @@ public class PanelCentro extends JPanel implements ActionListener{
 			break;
 			case "cancelar":
 			//arreglar esto
+				
+				
 			break;
 
 			case "salir":
-			//salir del usuario
+				proyectoc2.panelArriba.ok1_i.setEnabled(false);
+                proyectoc2.panelArriba.ok2_i.setEnabled(false);
+                proyectoc2.panelArriba.ok3_i.setEnabled(false);
+                proyectoc2.panelArriba.ok1_d.setEnabled(false);
+                proyectoc2.panelArriba.ok2_d.setEnabled(false);
+                proyectoc2.panelArriba.ok3_d.setEnabled(false);
+                
+                proyectoc2.panelArriba.panelCentro1.setVisible(true);
+                proyectoc2.panelArriba.panelCentro2.setVisible(false);
+                proyectoc2.panelArriba.panelCentro3.setVisible(false);
+                proyectoc2.panelArriba.panelCentro4.setVisible(false);
+                proyectoc2.panelArriba.panelCentro5.setVisible(false);
+                proyectoc2.panelArriba.panelCentro6.setVisible(false);
+                proyectoc2.panelArriba.panelCentro7.setVisible(false);
+                proyectoc2.panelArriba.panelCentro8.setVisible(false);
+                proyectoc2.panelArriba.panelCentro9.setVisible(false);
+                proyectoc2.panelArriba.panelCentro10.setVisible(false);
+                proyectoc2.panelArriba.panelCentro11.setVisible(false);
+                proyectoc2.panelArriba.panelCentro12.setVisible(false);
+                
+                n1.setEnabled(false);
+    	        n2.setEnabled(false);
+    	        n3.setEnabled(false);
+    	        n4.setEnabled(false);
+    	        n5.setEnabled(false);
+    	        n6.setEnabled(false);
+    	        n7.setEnabled(false);
+    	        n8.setEnabled(false);
+    	        n9.setEnabled(false);
+    	        n0.setEnabled(false);
+    	        salir.setEnabled(false);
+    	        cancelar.setEnabled(false);
+    	        limpiar.setEnabled(false);
+    	        gato.setEnabled(false);
+    	        numeral.setEnabled(false);
+    	        proyectoc2.PanelAbajo.cc.setEditable(true);
+    	        proyectoc2.PanelAbajo.usuario.setEnabled(true);
+    	        try {
+    	        	cerradotrans.setVisible(false);
+    	        }catch(NullPointerException e23){
+    	        	System.out.println("no serro por que no existe");
+    	        }
+    	        
+    	        try {
+    	        	cerrarpagos.setVisible(false);
+    	        }catch(NullPointerException e23){
+    	        	System.out.println("no serro por que no existe");
+    	        }
+    	        
+    	  
 			break;
 				
 			

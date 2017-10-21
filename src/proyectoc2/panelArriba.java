@@ -301,16 +301,11 @@ public class panelArriba extends JPanel implements ActionListener {
             break;
             
             case "ok2":
-            	if(ban==1) {/// ban==3 consulta de saldo
-            		JLabel imagen3 = new JLabel( );
-			        ImageIcon icono3 = new ImageIcon("imagenes/8p.PNG" );
-			        imagen3.setIcon( icono3 );
-			        imagen3.setAlignmentX(CENTER_ALIGNMENT);
-			        
-			        panelCentro3.add( imagen3, BorderLayout.NORTH );
+            	if(ban==1) {
+            		
 			        panelCentro2.setVisible(false);
 			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
-			        ban=3;
+			      
 			        ok1_i.setEnabled(false);
 			        ok2_i.setEnabled(false);
 			        ok3_i.setEnabled(false);
@@ -319,6 +314,7 @@ public class panelArriba extends JPanel implements ActionListener {
 			        ok3_d.setEnabled(false);
 			        while(true) {
 			        	if(proyectoc2.PanelAbajo.bandera_ok==1) {
+			        		
 			        		break;
 			        	}
 			        }
@@ -345,12 +341,8 @@ public class panelArriba extends JPanel implements ActionListener {
 			        ok3_d.setEnabled(false);
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
-                    /*
-                   try {
-                	   Thread.sleep(5000);
-                   }catch(Exception e12 ) {
-                	   e12.printStackTrace();
-                   }*/
+                    proyectoc2.PanelCentro.cerradotrans=objeto3;
+                   
 
                     
             	}else {
@@ -360,10 +352,11 @@ public class panelArriba extends JPanel implements ActionListener {
             	}  
             break;
             case "ok4":
-            	if(ban==5) {/// ojo la bandera es solo prueba toca con pagos
+            	if(ban==1) {
             		System.out.println("pagos");   
             		Panel_Pagos objeto3=new Panel_Pagos();
                     objeto3.setVisible(true);
+                    proyectoc2.PanelCentro.cerrarpagos=objeto3;
             	}else {
             		 if(ban==2) {
             			 retiros=100000;
@@ -371,10 +364,8 @@ public class panelArriba extends JPanel implements ActionListener {
             	}  
             break;
             case "ok5":
-            	if(ban==6) {/// ojo la bandera es solo prueba toca con pagos
-            		System.out.println("pagos");   
-            		Panel_Trans objeto3=new Panel_Trans();
-                    objeto3.setVisible(true);
+            	if(ban==1) {
+            		//clave
             	}else {
             		 if(ban==2) {
             			 retiros=50000;

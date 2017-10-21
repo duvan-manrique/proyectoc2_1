@@ -164,9 +164,6 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            				}
 	            				
 	            				
-	            				
-	            				
-	            				
 	            			}
 	            		}
 	            		
