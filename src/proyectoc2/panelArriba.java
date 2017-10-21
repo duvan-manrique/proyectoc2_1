@@ -33,6 +33,13 @@ public class panelArriba extends JPanel implements ActionListener {
 	public static JButton ok3_d;
 	static int ban=1;
 	static int retiros=0;
+	
+	
+	public String c0="0", c1="1",c2="2";
+    public String c3="3",c4="4", c5="5",c6="6";
+    public String c7="7",c8="8",c9="9";
+	
+	
 	public panelArriba() {
 		
 		panelIzquierdo = new JPanel( );
@@ -56,6 +63,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	        
 	        ok1_i = new JButton( "ok1" );
 	        ok1_i.addActionListener( this );
+	        ok1_i.setActionCommand( c0);
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 0;
 	        constraint.gridy = 2;
@@ -66,6 +74,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	        
 	        ok2_i = new JButton( "ok2" );
 	        ok2_i.addActionListener( this );
+	        ok2_i.setActionCommand( c2);
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 0;
 	        constraint.gridy = 4;
@@ -76,6 +85,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	        
 	        ok3_i = new JButton( "ok3" );
 	        ok3_i.addActionListener( this );
+	        ok3_i.setActionCommand( c3);
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 0;
 	        constraint.gridy = 6;
@@ -95,6 +105,7 @@ public class panelArriba extends JPanel implements ActionListener {
 		        
 		        ok1_d = new JButton( "ok4" );
 		        ok1_d.addActionListener( this );
+		        ok1_d.setActionCommand( c4);
 		        constraint = new GridBagConstraints( );
 		        constraint.gridx = 0;
 		        constraint.gridy = 2;
@@ -105,6 +116,7 @@ public class panelArriba extends JPanel implements ActionListener {
 		        
 		        ok2_d = new JButton( "ok5" );
 		        ok2_d.addActionListener( this );
+		        ok2_d.setActionCommand( c5);
 		        constraint = new GridBagConstraints( );
 		        constraint.gridx = 0;
 		        constraint.gridy = 4;
@@ -115,6 +127,7 @@ public class panelArriba extends JPanel implements ActionListener {
 		        
 		        ok3_d = new JButton( "ok6" );
 		        ok3_d.addActionListener( this );
+		        ok3_d.setActionCommand( c6);
 		        constraint = new GridBagConstraints( );
 		        constraint.gridx = 0;
 		        constraint.gridy = 6;
