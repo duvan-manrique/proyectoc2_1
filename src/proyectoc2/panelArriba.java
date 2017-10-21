@@ -257,6 +257,7 @@ public class panelArriba extends JPanel implements ActionListener {
       switch (e.getActionCommand()) {
           
           case "ok1":
+        	  proyectoc2.PanelAbajo.mensaje.setText("no olvide, retire su dinero");
           	if(ban==1) {
 				        panelCentro2.setVisible(false);
 				        panelCentro3.setVisible(true);
@@ -274,7 +275,12 @@ public class panelArriba extends JPanel implements ActionListener {
 				        int pass1=0;
 				        do{
 				        	
-				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException u) {
+				        		pass="-9";
+				        	}
+				        	
 				        	pass1=Integer.parseInt(pass);
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
@@ -313,6 +319,7 @@ public class panelArriba extends JPanel implements ActionListener {
           break;
           
           case "ok2":
+        	  proyectoc2.PanelAbajo.mensaje.setText("no olvide, retire su recibo");
           	if(ban==1) {
           		
           		panelCentro2.setVisible(false);
@@ -330,7 +337,12 @@ public class panelArriba extends JPanel implements ActionListener {
 			        int pass1=0;
 			        do{
 			        	
-			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException u) {
+			        		pass="-9";
+			        	}
+			        	
 			        	pass1=Integer.parseInt(pass);
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
@@ -362,7 +374,12 @@ public class panelArriba extends JPanel implements ActionListener {
 				        int pass1=0;
 				        do{
 				        	
-				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException u) {
+				        		pass="-9";
+				        	}
+				        	
 				        	pass1=Integer.parseInt(pass);
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
@@ -401,6 +418,7 @@ public class panelArriba extends JPanel implements ActionListener {
           break;
           
           case "ok3":
+        	  proyectoc2.PanelAbajo.mensaje.setText("gracias por la transferencia");
           	if(ban==1) {
           		ok1_i.setEnabled(false);
 			        ok2_i.setEnabled(false);
@@ -415,7 +433,12 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
 				        do{
 				        	
-				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException u) {
+				        		pass="-9";
+				        	}
+				        	
 				        	pass1=Integer.parseInt(pass);
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
@@ -438,7 +461,12 @@ public class panelArriba extends JPanel implements ActionListener {
   				        int pass1=0;
   				        do{
   				        	
-  				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+  				        	try {
+  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+  				        	}catch(NullPointerException u) {
+  				        		pass="-9";
+  				        	}
+  				        	
   				        	pass1=Integer.parseInt(pass);
   				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
   				        	System.out.println(pass);
@@ -476,6 +504,7 @@ public class panelArriba extends JPanel implements ActionListener {
           	}  
           break;
           case "ok4":
+        	  proyectoc2.PanelAbajo.mensaje.setText("pagos no olvide su tarjeta");
           	if(ban==1) {
           		System.out.println("pagos");
           		 String pass="";
@@ -485,7 +514,12 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
 			        do{
 			        	
-			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException u) {
+			        		pass="-9";
+			        	}
+			        	
 			        	pass1=Integer.parseInt(pass);
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
@@ -506,7 +540,12 @@ public class panelArriba extends JPanel implements ActionListener {
  				        int pass1=0;
  				        do{
  				        	
- 				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+ 				        	try {
+ 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+ 				        	}catch(NullPointerException u) {
+ 				        		pass="-9";
+ 				        	}
+ 				        	
  				        	pass1=Integer.parseInt(pass);
  				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
  				        	System.out.println(pass);
@@ -544,6 +583,7 @@ public class panelArriba extends JPanel implements ActionListener {
           	}  
           break;
           case "ok5":
+        	  proyectoc2.PanelAbajo.mensaje.setText("cambio de clave, no la olvide");
           	if(ban==1) {
           		//clave  (proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
           			panelCentro2.setVisible(false);
@@ -554,7 +594,12 @@ public class panelArriba extends JPanel implements ActionListener {
 			        int pass1=0;
 			        do{
 			        	
-			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException u) {
+			        		pass="-9";
+			        	}
+			        	
 			        	pass1=Integer.parseInt(pass);
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
@@ -578,7 +623,12 @@ public class panelArriba extends JPanel implements ActionListener {
  				        int pass1=0;
  				        do{
  				        	
- 				        	pass=(JOptionPane.showInputDialog("password: ").trim());
+ 				        	try {
+ 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+ 				        	}catch(NullPointerException u) {
+ 				        		pass="-9";
+ 				        	}
+ 				        	
  				        	pass1=Integer.parseInt(pass);
  				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
  				        	System.out.println(pass);
@@ -624,8 +674,12 @@ public class panelArriba extends JPanel implements ActionListener {
 			        String pass="";
 			        int pass1=0;
 			        do{
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException u) {
+			        		pass="-9";
+			        	}
 			        	
-			        	pass=(JOptionPane.showInputDialog("password: ").trim());
 			        	pass1=Integer.parseInt(pass);
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);

@@ -54,7 +54,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        Insets insets = new Insets( 5, 10, 5, 10 );
 	        constraint.insets = insets;
 	        
-	   
+	   /*
 	        titulocontraseña=new JLabel("contraseña");
             constraint.gridx = 0;
             constraint.gridy =1;
@@ -67,7 +67,7 @@ public class PanelCentro extends JPanel implements ActionListener{
             constraint.gridy = 1;
             panelCentro.add( contraseña, constraint );
 	        
-            
+         */   
 	        n1 = new JButton( "  1  " );
 	        n1.addActionListener( this );
 	        constraint = new GridBagConstraints( );
@@ -222,6 +222,7 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        constraint.insets = insets;	        
 	        panelCentro.add( salir, constraint );
 	        add(panelCentro);
+	        /*
 	        n1.setEnabled(false);
 	        n2.setEnabled(false);
 	        n3.setEnabled(false);
@@ -233,10 +234,12 @@ public class PanelCentro extends JPanel implements ActionListener{
 	        n9.setEnabled(false);
 	        n0.setEnabled(false);
 	        salir.setEnabled(false);
+	       */
 	        cancelar.setEnabled(false);
-	        limpiar.setEnabled(false);
-	        gato.setEnabled(false);
-	        numeral.setEnabled(false);
+	        //limpiar.setEnabled(false);
+	        //gato.setEnabled(false);
+	        //numeral.setEnabled(false);
+	        
 	}
 
 
@@ -244,51 +247,79 @@ public class PanelCentro extends JPanel implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		switch (e.getActionCommand().trim()) {
 			case "0":
-				contraseña.setText(contraseña.getText()+"0");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"0");
 			break;
 			
 			case "1":
-				contraseña.setText(contraseña.getText()+"1");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"1");
 			break;
 			
 			case "2":
-				contraseña.setText(contraseña.getText()+"2");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"2");
 			break;
 				
 			case "3":
-				contraseña.setText(contraseña.getText()+"3");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"3");
 			break;
 				
 			case "4":
-				contraseña.setText(contraseña.getText()+"4");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"4");
 			break;
 				
 			case "5":
-				contraseña.setText(contraseña.getText()+"5");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"5");
 			break;
 				
 			case "6":
-				contraseña.setText(contraseña.getText()+"6");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"6");
 			break;
 				
 			case "7":
-				contraseña.setText(contraseña.getText()+"7");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"7");
 			break;
 				
 			case "8":
-				contraseña.setText(contraseña.getText()+"8");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"8");
 			break;
 				
 			case "9":
-				contraseña.setText(contraseña.getText()+"9");
+				proyectoc2.PanelAbajo.cc.setText(proyectoc2.PanelAbajo.cc.getText()+"9");
 			break;
 			
 			case "limpiar":
-				contraseña.setText("");
+				proyectoc2.PanelAbajo.cc.setText("");
 			break;
 			case "cancelar":
-			//arreglar esto
-				
+				proyectoc2.panelArriba.panelCentro1.setVisible(false);
+                proyectoc2.panelArriba.panelCentro2.setVisible(true);
+                proyectoc2.panelArriba.panelCentro3.setVisible(false);
+                proyectoc2.panelArriba.panelCentro4.setVisible(false);
+                proyectoc2.panelArriba.panelCentro5.setVisible(false);
+                proyectoc2.panelArriba.panelCentro6.setVisible(false);
+                proyectoc2.panelArriba.panelCentro7.setVisible(false);
+                proyectoc2.panelArriba.panelCentro8.setVisible(false);
+                proyectoc2.panelArriba.panelCentro9.setVisible(false);
+                proyectoc2.panelArriba.panelCentro10.setVisible(false);
+                proyectoc2.panelArriba.panelCentro11.setVisible(false);
+                proyectoc2.panelArriba.panelCentro12.setVisible(false);
+                try {
+    	        	cerradotrans.setVisible(false);
+    	        }catch(NullPointerException e23){
+    	        	System.out.println("no serro por que no existe");
+    	        }
+    	        
+    	        try {
+    	        	cerrarpagos.setVisible(false);
+    	        }catch(NullPointerException e23){
+    	        	System.out.println("no serro por que no existe");
+    	        }
+    	        proyectoc2.panelArriba.ban=1;
+    	        proyectoc2.panelArriba.ok1_i.setEnabled(true);
+                proyectoc2.panelArriba.ok2_i.setEnabled(true);
+                proyectoc2.panelArriba.ok3_i.setEnabled(true);
+                proyectoc2.panelArriba.ok1_d.setEnabled(true);
+                proyectoc2.panelArriba.ok2_d.setEnabled(true);
+                proyectoc2.panelArriba.ok3_d.setEnabled(false);
 				
 			break;
 
@@ -312,7 +343,7 @@ public class PanelCentro extends JPanel implements ActionListener{
                 proyectoc2.panelArriba.panelCentro10.setVisible(false);
                 proyectoc2.panelArriba.panelCentro11.setVisible(false);
                 proyectoc2.panelArriba.panelCentro12.setVisible(false);
-                
+                /*
                 n1.setEnabled(false);
     	        n2.setEnabled(false);
     	        n3.setEnabled(false);
@@ -324,11 +355,13 @@ public class PanelCentro extends JPanel implements ActionListener{
     	        n9.setEnabled(false);
     	        n0.setEnabled(false);
     	        salir.setEnabled(false);
-    	        cancelar.setEnabled(false);
+    	        
     	        limpiar.setEnabled(false);
     	        gato.setEnabled(false);
     	        numeral.setEnabled(false);
-    	        proyectoc2.PanelAbajo.cc.setEditable(true);
+    	        */
+                cancelar.setEnabled(false);
+    	        proyectoc2.PanelAbajo.cc.setEditable(false);
     	        proyectoc2.PanelAbajo.usuario.setEnabled(true);
     	        try {
     	        	cerradotrans.setVisible(false);

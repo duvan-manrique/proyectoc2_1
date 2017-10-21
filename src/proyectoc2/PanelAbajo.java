@@ -38,8 +38,9 @@ public class PanelAbajo extends JPanel implements ActionListener{
             constraint.gridx = 2;
             constraint.gridy = 1;
             add( titulocc, constraint );
-            cc=new JTextField("       cc          ");
+            cc=new JTextField("                 ");
             cc.setEditable(false);
+            cc.setBackground(Color.white);
             constraint.gridx = 2;
             constraint.gridy = 2;
             add( cc, constraint );

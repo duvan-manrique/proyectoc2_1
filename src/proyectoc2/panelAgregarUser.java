@@ -141,7 +141,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
                 persona1.setsaldo(Integer.parseInt(saldo.getText().trim()));
                 persona1.setclave(Integer.parseInt(clave.getText().trim()));
                 proyectoc2.PanelCentro.l_personas.add(persona1);
-                proyectoc2.PanelAbajo.cc.setEditable(true);
+                proyectoc2.PanelAbajo.cc.setEditable(false);
                 nombre.setText("                 ");
                 apellido.setText("                 ");
                 saldo.setText("                 ");
