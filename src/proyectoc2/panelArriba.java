@@ -117,7 +117,7 @@ public class panelArriba extends JPanel implements ActionListener {
 
 		panelCentro10 = new JPanel( );
 			JLabel imagen10 = new JLabel( );
-			ImageIcon icono10 = new ImageIcon("imagenes/nuevacontrase�a.PNG" );
+			ImageIcon icono10 = new ImageIcon("imagenes/nuevacontrasena.PNG" );
 	        imagen10.setIcon( icono10 );
 	        imagen10.setAlignmentX(CENTER_ALIGNMENT);
 	        panelCentro10.add( imagen10, BorderLayout.NORTH );
@@ -259,6 +259,7 @@ public class panelArriba extends JPanel implements ActionListener {
             case "ok1":
             	if(ban==1) {
 				        panelCentro2.setVisible(false);
+				        panelCentro3.setVisible(true);
 				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
 				        ban=2;
 				        ok3_d.setEnabled(true);
@@ -266,13 +267,11 @@ public class panelArriba extends JPanel implements ActionListener {
             		  if(ban==2) {
             			retiros=600000;
             			ban=1;
-            			JLabel imagen_3 = new JLabel( );
-  				        ImageIcon icono_3 = new ImageIcon("imagenes/8p.PNG" );
-  				        imagen_3.setIcon( icono_3 );
-  				        imagen_3.setAlignmentX(CENTER_ALIGNMENT);
+            			
   				        
-  				        panelCentro4.add( imagen_3, BorderLayout.NORTH );
+  				       
   				        panelCentro3.setVisible(false);
+  				        panelCentro4.setVisible(true);
   				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
   				        
   				     
@@ -283,16 +282,19 @@ public class panelArriba extends JPanel implements ActionListener {
             				
       				       
       				        panelCentro4.setVisible(false);
+      				        panelCentro5.setVisible(true);
       				        panelCentro.add(panelCentro5,BorderLayout.NORTH);
       				        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-retiros);
             			}else {
             				
       				        panelCentro4.setVisible(false);
+      				        panelCentro12.setVisible(true);
       				        panelCentro.add(panelCentro12,BorderLayout.NORTH);
       				        JOptionPane.showMessageDialog(null, "saldo insuficiente");
             			}
             				panelCentro5.setVisible(false);
 	  				        panelCentro12.setVisible(false);
+	  				        panelCentro2.setVisible(true);
 	  				        panelCentro.add(panelCentro2,BorderLayout.NORTH);
             		  }
             	}  
@@ -333,8 +335,7 @@ public class panelArriba extends JPanel implements ActionListener {
             break;
             
             case "ok3":
-            	if(ban==4) {/// ojo la bandera es solo prueba toca con clave
-            		System.out.println("trnsferencia");   
+            	if(ban==1) {          	   
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
             	}else {
