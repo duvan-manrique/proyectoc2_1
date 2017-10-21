@@ -277,11 +277,16 @@ public class panelArriba extends JPanel implements ActionListener {
 				        	
 				        	try {
 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-				        	}catch(NullPointerException u) {
+				        	}catch(Exception error ) {
 				        		pass="-9";
 				        	}
 				        	
-				        	pass1=Integer.parseInt(pass);
+				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
+				        	
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
 				        	
@@ -339,11 +344,16 @@ public class panelArriba extends JPanel implements ActionListener {
 			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-			        	}catch(NullPointerException u) {
-			        		pass="-9";
+			        	}catch(Exception error ) {
+			        		pass="-1";
 			        	}
 			        	
-			        	pass1=Integer.parseInt(pass);
+			        	try {
+			        		pass1=Integer.parseInt(pass);
+			        	}catch(Exception error ) {
+			        		pass1=0;
+			        	}
+			        	
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
 			        	
@@ -376,11 +386,16 @@ public class panelArriba extends JPanel implements ActionListener {
 				        	
 				        	try {
 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-				        	}catch(NullPointerException u) {
+				        	}catch(Exception error ) {
 				        		pass="-9";
 				        	}
 				        	
-				        	pass1=Integer.parseInt(pass);
+				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
+				        	
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
 				        	
@@ -433,13 +448,13 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
 				        do{
 				        	
+				        	
+				        	
 				        	try {
 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-				        	}catch(NullPointerException u) {
+				        	}catch(Exception error ) {
 				        		pass="-9";
 				        	}
-				        	
-				        	pass1=Integer.parseInt(pass);
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
 				        	
@@ -463,11 +478,16 @@ public class panelArriba extends JPanel implements ActionListener {
   				        	
   				        	try {
   				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-  				        	}catch(NullPointerException u) {
+  				        	}catch(Exception error ) {
   				        		pass="-9";
   				        	}
   				        	
-  				        	pass1=Integer.parseInt(pass);
+  				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
+				        	
   				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
   				        	System.out.println(pass);
   				        	
@@ -516,11 +536,16 @@ public class panelArriba extends JPanel implements ActionListener {
 			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-			        	}catch(NullPointerException u) {
+			        	}catch(Exception error ) {
 			        		pass="-9";
 			        	}
 			        	
-			        	pass1=Integer.parseInt(pass);
+			        	try {
+			        		pass1=Integer.parseInt(pass);
+			        	}catch(Exception error ) {
+			        		pass1=0;
+			        	}
+			        	
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
 			        	
@@ -542,11 +567,16 @@ public class panelArriba extends JPanel implements ActionListener {
  				        	
  				        	try {
  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
- 				        	}catch(NullPointerException u) {
+ 				        	}catch(Exception error ) {
  				        		pass="-9";
  				        	}
  				        	
- 				        	pass1=Integer.parseInt(pass);
+ 				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
+				        	
  				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
  				        	System.out.println(pass);
  				        	
@@ -596,11 +626,16 @@ public class panelArriba extends JPanel implements ActionListener {
 			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-			        	}catch(NullPointerException u) {
+			        	}catch(Exception error ) {
 			        		pass="-9";
 			        	}
 			        	
-			        	pass1=Integer.parseInt(pass);
+			        	try {
+			        		pass1=Integer.parseInt(pass);
+			        	}catch(Exception error ) {
+			        		pass1=0;
+			        	}
+			        	
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
 			        	
@@ -625,11 +660,16 @@ public class panelArriba extends JPanel implements ActionListener {
  				        	
  				        	try {
  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
- 				        	}catch(NullPointerException u) {
+ 				        	}catch(Exception error ) {
  				        		pass="-9";
  				        	}
  				        	
- 				        	pass1=Integer.parseInt(pass);
+ 				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
+				        	
  				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
  				        	System.out.println(pass);
  				        	
@@ -676,11 +716,16 @@ public class panelArriba extends JPanel implements ActionListener {
 			        do{
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
-			        	}catch(NullPointerException u) {
+			        	}catch(Exception error ) {
 			        		pass="-9";
 			        	}
 			        	
-			        	pass1=Integer.parseInt(pass);
+			        	try {
+			        		pass1=Integer.parseInt(pass);
+			        	}catch(Exception error ) {
+			        		pass1=0;
+			        	}
+			        	
 			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 			        	System.out.println(pass);
 			        	
