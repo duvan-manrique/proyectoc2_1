@@ -113,7 +113,7 @@ public class panelArriba extends JPanel implements ActionListener {
 		        constraint.insets = insets;	        
 		        panelDerecho.add( ok2_d, constraint );
 		        
-		        ok3_d = new JButton( "imagen" );
+		        ok3_d = new JButton( "ok6" );
 		        ok3_d.addActionListener( this );
 		        constraint = new GridBagConstraints( );
 		        constraint.gridx = 0;
@@ -152,22 +152,13 @@ public class panelArriba extends JPanel implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		  /* validar habilitacion y des habilitar + cambios de imagesn y gestos de botonoes imagenes revisar orden 
+		  /* validar habilitacion y des habilitar + cambios de imagesn y gestos de botonoes imagenes 
 		   * 
 		   */
         switch (e.getActionCommand()) {
-            case "imagen":
-            	
-                System.out.println("Se oprimio 2imagen");
-               
-                ban=2;
-               
-		        
-                
-            break;
+            
             case "ok1":
-            	
-            	if(ban==2) {
+            	if(ban==1) {
             		  System.out.println("retiro en efectivo");
 		                System.out.println("Se oprimio 3imagen");
 		                JLabel imagen3 = new JLabel( );
@@ -178,9 +169,13 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro3.add( imagen3, BorderLayout.NORTH );
 				        panelCentro2.setVisible(false);
 				        panelCentro.add(panelCentro3,BorderLayout.NORTH);
-               
+				        ban=2;
+				        ok3_d.setEnabled(true);
             	}else {
-            		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
+            		  if(ban==2) {
+            			   
+            			  
+            		  }
             	}  
             break;
             
@@ -220,6 +215,12 @@ public class panelArriba extends JPanel implements ActionListener {
             	}else {
             		  JOptionPane.showMessageDialog(null, "primero debe insertar tarjeta ");
             	}  
+            break;
+            case "ok6":
+                System.out.println("Se oprimio 2imagen");
+               
+                ban=2;
+     
             break;
 	}
 

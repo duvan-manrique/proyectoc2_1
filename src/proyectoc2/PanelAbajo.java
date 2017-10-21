@@ -138,13 +138,13 @@ public class PanelAbajo extends JPanel implements ActionListener{
 	            				        proyectoc2.panelArriba.panelCentro2.add( imagen2, BorderLayout.NORTH );
 	            				        proyectoc2.panelArriba.panelCentro1.setVisible(false);
 	            				        proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro2,BorderLayout.NORTH);
-	            					
 	            				        proyectoc2.panelArriba.ok1_i.setEnabled(true);
 	            				        proyectoc2.panelArriba.ok2_i.setEnabled(true);
 	            				        proyectoc2.panelArriba.ok3_i.setEnabled(true);
 	            				        proyectoc2.panelArriba.ok1_d.setEnabled(true);
 	            				        proyectoc2.panelArriba.ok2_d.setEnabled(true);
-	            				    
+	            				        
+	            				        proyectoc2.PanelAbajo.cc.setEditable(false);
 	            				        
 	            				}
 	            			}

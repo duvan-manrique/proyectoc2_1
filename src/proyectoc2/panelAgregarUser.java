@@ -125,6 +125,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
                 
                
                 this.add(panel_p);
+                proyectoc2.PanelAbajo.usuario.setEnabled(false);
     }
 
     @Override
@@ -146,11 +147,10 @@ public class panelAgregarUser extends JFrame implements ActionListener{
                 saldo.setText("                 ");
                 clave.setText("                 ");
                 cedula.setText("                  ");
+                proyectoc2.PanelAbajo.usuario.setEnabled(true);
                 this.setVisible(false);
                 }
                 break;
-        
-        
         }
         
         
