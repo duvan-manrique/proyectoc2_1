@@ -173,7 +173,7 @@ public class Panel_Trans extends JFrame implements ActionListener{
 	                return false;
 	            }
 	      	  int ivalortrans= Integer.parseInt(valortrans.getText().trim());
-	      	  if(ivalortrans<=0) {
+	      	  if(ivalortrans<0) {
 	      		  JOptionPane.showMessageDialog(null, "el valor no es valida son valores positivos!");
 	      		  return false;
 	      	  }else {

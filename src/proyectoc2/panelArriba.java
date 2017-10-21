@@ -247,6 +247,7 @@ public class panelArriba extends JPanel implements ActionListener {
 		        panelCentro.add(panelCentro1,BorderLayout.NORTH);
 	        
 	}
+	public int bandera_cla=1;
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -276,6 +277,15 @@ public class panelArriba extends JPanel implements ActionListener {
 				        String pass="";
 				        int pass1=0;
 				        do{
+				        	
+				        	bandera_cla=1;
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException lol ) {
+				        		bandera_cla=0;
+				        		break;
+				        	}
+				        	
 				        	
 				        	try {
 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -345,6 +355,15 @@ public class panelArriba extends JPanel implements ActionListener {
 			        int pass1=0;
 			        do{
 			        	
+			        	bandera_cla=1;
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException lol ) {
+			        		bandera_cla=0;
+			        		break;
+			        	}
+			        	
+			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
 			        	}catch(Exception error ) {
@@ -386,6 +405,14 @@ public class panelArriba extends JPanel implements ActionListener {
 				        String pass="";
 				        int pass1=0;
 				        do{
+				        	bandera_cla=1;
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException lol ) {
+				        		bandera_cla=0;
+				        		break;
+				        	}
+				        	
 				        	
 				        	try {
 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -404,7 +431,7 @@ public class panelArriba extends JPanel implements ActionListener {
 				        	
 				        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
 			        proyectoc2.PanelAbajo.bandera_ok=0;
-          			
+			        
           			if(retiros<=(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
           				
     				       
@@ -451,7 +478,13 @@ public class panelArriba extends JPanel implements ActionListener {
 				        panelCentro4.setVisible(true);
 				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
 				        do{
-				        	
+				        	bandera_cla=1;
+				        	try {
+				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+				        	}catch(NullPointerException lol ) {
+				        		bandera_cla=0;
+				        		break;
+				        	}
 				        	
 				        	
 				        	try {
@@ -459,14 +492,35 @@ public class panelArriba extends JPanel implements ActionListener {
 				        	}catch(Exception error ) {
 				        		pass="-9";
 				        	}
+				        	
+
+				        	try {
+				        		pass1=Integer.parseInt(pass);
+				        	}catch(Exception error ) {
+				        		pass1=0;
+				        	}
 				        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
 				        	System.out.println(pass);
 				        	
+				        
 				        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
-          		Panel_Trans objeto3=new Panel_Trans();
-                  objeto3.setVisible(true);
-                  proyectoc2.PanelCentro.cerradotrans=objeto3;
-                 
+				        if(bandera_cla==1) {
+				        	 Panel_Trans objeto3=new Panel_Trans();
+			                  objeto3.setVisible(true);
+			                  proyectoc2.PanelCentro.cerradotrans=objeto3;
+			                 
+				        }else {
+				        	if(bandera_cla==0) {
+				        		panelCentro4.setVisible(false);
+				        		panelCentro2.setVisible(true);
+				        		ok1_i.setEnabled(true);
+				                ok2_i.setEnabled(true);
+				                ok3_i.setEnabled(true);
+				                ok1_d.setEnabled(true);
+				                ok2_d.setEnabled(true);
+				        	}
+				        }
+				 
 
                   
           	}else {
@@ -479,6 +533,13 @@ public class panelArriba extends JPanel implements ActionListener {
   				        String pass="";
   				        int pass1=0;
   				        do{
+  				        	bandera_cla=1;
+  				        	try {
+  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+  				        	}catch(NullPointerException lol ) {
+  				        		bandera_cla=0;
+  				        		break;
+  				        	}
   				        	
   				        	try {
   				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -538,6 +599,14 @@ public class panelArriba extends JPanel implements ActionListener {
 			        panelCentro4.setVisible(true);
 				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
 			        do{
+			        	bandera_cla=1;
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException lol ) {
+			        		bandera_cla=0;
+			        		break;
+			        	}
+			        	
 			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -569,6 +638,14 @@ public class panelArriba extends JPanel implements ActionListener {
  				        String pass="";
  				        int pass1=0;
  				        do{
+ 				        	bandera_cla=1;
+ 				        	try {
+ 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+ 				        	}catch(NullPointerException lol ) {
+ 				        		bandera_cla=0;
+ 				        		break;
+ 				        	}
+ 				        	
  				        	
  				        	try {
  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -629,6 +706,13 @@ public class panelArriba extends JPanel implements ActionListener {
           		String pass="";
 			        int pass1=0;
 			        do{
+			        	bandera_cla=1;
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException lol ) {
+			        		bandera_cla=0;
+			        		break;
+			        	}
 			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -663,6 +747,14 @@ public class panelArriba extends JPanel implements ActionListener {
  				        String pass="";
  				        int pass1=0;
  				        do{
+ 				        	bandera_cla=1;
+ 				        	try {
+ 				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+ 				        	}catch(NullPointerException lol ) {
+ 				        		bandera_cla=0;
+ 				        		break;
+ 				        	}
+ 				        	
  				        	
  				        	try {
  				        		pass=(JOptionPane.showInputDialog("password: ").trim());	
@@ -721,6 +813,15 @@ public class panelArriba extends JPanel implements ActionListener {
 			        String pass="";
 			        int pass1=0;
 			        do{
+			        	
+			        	bandera_cla=1;
+			        	try {
+			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
+			        	}catch(NullPointerException lol ) {
+			        		bandera_cla=0;
+			        		break;
+			        	}
+			        	
 			        	try {
 			        		pass=(JOptionPane.showInputDialog("password: ").trim());	
 			        	}catch(Exception error ) {

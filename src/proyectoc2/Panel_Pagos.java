@@ -175,6 +175,18 @@ public class Panel_Pagos extends JFrame implements ActionListener{
                 return false;
              
             } 
+         	
+
+	      	  int ivalor= Integer.parseInt(valor.getText().trim());
+	      	  if(ivalor<0) {
+	      		  JOptionPane.showMessageDialog(null, "el valor no es valida son valores positivos!");
+	      		  return false;
+	      	  }else {
+	      		  if(ivalor>( proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
+	      			JOptionPane.showMessageDialog(null, "saldo insuficiente!");
+	      			return false;
+	      		  }
+	      	  }
             
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");
