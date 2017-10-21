@@ -35,9 +35,9 @@ public class panelArriba extends JPanel implements ActionListener {
 	static int retiros=0;
 	
 	
-	public String c0="0", c1="1",c2="2";
-    public String c3="3",c4="4", c5="5",c6="6";
-    public String c7="7",c8="8",c9="9";
+	public String  c1="ok1",c2="ok2";
+    public String c3="ok3",c4="4", c5="ok5",c6="ok6";
+
 	
 	
 	public panelArriba() {
@@ -155,7 +155,7 @@ public class panelArriba extends JPanel implements ActionListener {
 	        
 	        ok1_i = new JButton( "ok1" );
 	        ok1_i.addActionListener( this );
-	        ok1_i.setActionCommand( c0);
+	        ok1_i.setActionCommand( c1);
 	        constraint = new GridBagConstraints( );
 	        constraint.gridx = 0;
 	        constraint.gridy = 2;
