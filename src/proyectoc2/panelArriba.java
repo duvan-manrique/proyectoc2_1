@@ -477,7 +477,21 @@ public class panelArriba extends JPanel implements ActionListener {
           break;
           case "ok4":
           	if(ban==1) {
-          		System.out.println("pagos");   
+          		System.out.println("pagos");
+          		 String pass="";
+			        int pass1=0;
+			        panelCentro2.setVisible(false);
+			        panelCentro4.setVisible(true);
+				        panelCentro.add(panelCentro4,BorderLayout.NORTH);
+			        do{
+			        	
+			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	pass1=Integer.parseInt(pass);
+			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+			        	System.out.println(pass);
+			        	
+			        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
+			       
           		Panel_Pagos objeto3=new Panel_Pagos();
                   objeto3.setVisible(true);
                   proyectoc2.PanelCentro.cerrarpagos=objeto3;

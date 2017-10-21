@@ -120,7 +120,7 @@ public class panelAgregarUser extends JFrame implements ActionListener{
                 panel_p.add(btnAgregar);
                  btnAgregar.addActionListener( this );
                 constraint.gridx = 0;
-                constraint.gridy = 7;
+                constraint.gridy = 5;
                 panel_p.add( btnAgregar, constraint );
                 
                

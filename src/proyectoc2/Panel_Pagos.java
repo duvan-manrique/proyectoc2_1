@@ -87,12 +87,22 @@ public class Panel_Pagos extends JFrame implements ActionListener{
                 constraint.gridx =1;
                 constraint.gridy =3;
                 panel_p.add( empresa, constraint );
+                empresa.addItem("empresa");
 	          	empresa.addItem("Agua");
 	          	empresa.addItem("Luz");
 	          	empresa.addItem("Gas");
 	          	empresa.addItem("Telefoto");
 	          	empresa.addItem("Internet");
 	          	empresa.addItem("televicion");
+	          	
+	          	
+	            
+	          	btnpago=new JButton("pagar");
+                panel_p.add(btnpago);
+                btnpago.addActionListener( this );
+                constraint.gridx = 0;
+                constraint.gridy = 5;
+                panel_p.add( btnpago, constraint );
 
                
                 this.add(panel_p);
@@ -101,35 +111,79 @@ public class Panel_Pagos extends JFrame implements ActionListener{
    
     
     @Override
-    public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            
-            case"finalizar transferencia":
-                
-                
-                if(validarDatos()){    
-              
-                valor.setText("                 ");
-                nreferencia.setText("                 ");
-               
-                this.setVisible(false);
+    public void actionPerformed(ActionEvent e4) {
+        switch (e4.getActionCommand()) {
+        case "pagar":
+        if(validarDatos()){    
+        	proyectoc2.panelArriba.panelCentro4.setVisible(false);
+        	proyectoc2.panelArriba.panelCentro8.setVisible(true);
+        	proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro8,BorderLayout.NORTH);
+	        	
+        proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-(Integer.parseInt(valor.getText().trim())));	
+        valor.setText("                 ");
+        nreferencia.setText("                 ");
+        
+        
+        this.setVisible(false);
+       
+        
+        
      
-                }
-                
-                break;
+        JOptionPane.showMessageDialog(null,"su recibo");
+        
+        try {
+     	   Thread.sleep(2000);
+        }catch(Exception e12 ) {
+     	   e12.printStackTrace();
+        }
+        JOptionPane.showMessageDialog(null,"saldo restante: "+proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo());
+        proyectoc2.panelArriba.panelCentro8.setVisible(false);
+        proyectoc2.panelArriba.panelCentro2.setVisible(true);
+        proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro2,BorderLayout.NORTH);
+        proyectoc2.panelArriba.ok1_i.setEnabled(true);
+        proyectoc2.panelArriba.ok2_i.setEnabled(true);
+        proyectoc2.panelArriba.ok3_i.setEnabled(true);
+        proyectoc2.panelArriba.ok1_d.setEnabled(true);
+        proyectoc2.panelArriba.ok2_d.setEnabled(true);
+        proyectoc2.panelArriba.ok3_d.setEnabled(true);
+     
+        }
+        break;
+        }
         
         
-        }
-        }
+        
+    }
+        
     public boolean validarDatos(){
         if(!nreferencia.getText().trim().equals("") && !valor.getText().trim().equals("") ){
-            //validacion + variable de clave para todos 
+        	if(((String) empresa.getSelectedItem()).equals("empresa")) {
+        		 JOptionPane.showMessageDialog(null, "selecione empresa");
+        		return false;
+        	}
+        	try{
+                int referencia = Integer.parseInt(nreferencia.getText().trim());
+            }catch(Exception error){
+                JOptionPane.showMessageDialog(null, "el valor no es valida!");
+             return false;
+            }
+         	
+         	try{
+                int val = Integer.parseInt(valor.getText().trim());
+            }catch(Exception error){
+                JOptionPane.showMessageDialog(null, "el valor no es valida!");
+                return false;
+             
+            } 
             
     }else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");
             return false;
         }
-         return true;
+       
+         
+     	
+     	return true;
 }
 
     
