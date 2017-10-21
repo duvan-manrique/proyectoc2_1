@@ -315,25 +315,40 @@ public class panelArriba extends JPanel implements ActionListener {
           case "ok2":
           	if(ban==1) {
           		
-			        panelCentro2.setVisible(false);
-			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
-			      
-			        ok1_i.setEnabled(false);
-			        ok2_i.setEnabled(false);
-			        ok3_i.setEnabled(false);
-			        ok1_d.setEnabled(false);
-			        ok2_d.setEnabled(false);
-			        ok3_d.setEnabled(false);
-			        while(true) {
-			        	if(proyectoc2.PanelAbajo.bandera_ok==1) {
-			        		
-			        		break;
-			        	}
-			        }
-			        proyectoc2.PanelAbajo.bandera_ok=0;
-			        panelCentro2.setVisible(false);
-			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
+          		panelCentro2.setVisible(false);
+		        panelCentro4.setVisible(true);
+		        panelCentro.add(panelCentro4,BorderLayout.NORTH);
+		       
+		        ok1_i.setEnabled(false);
+		        ok2_i.setEnabled(false);
+		        ok3_i.setEnabled(false);
+		        ok1_d.setEnabled(false);
+		        ok2_d.setEnabled(false);
+		        ok3_d.setEnabled(false);
+		        
+		        String pass="";
+			        int pass1=0;
+			        do{
+			        	
+			        	pass=(JOptionPane.showInputDialog("password: ").trim());
+			        	pass1=Integer.parseInt(pass);
+			        	System.out.println(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave());
+			        	System.out.println(pass);
+			        	
+			        }while((pass1==(proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getclave()))==false);
 			        
+			        panelCentro4.setVisible(false);
+			        panelCentro6.setVisible(true);
+			        panelCentro.add(panelCentro6,BorderLayout.NORTH);
+			        JOptionPane.showMessageDialog(null, "saldo :"+proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo());
+			        panelCentro6.setVisible(false);
+			        panelCentro2.setVisible(true);
+			        panelCentro.add(panelCentro2,BorderLayout.NORTH);
+			        ok1_i.setEnabled(true);
+			        ok2_i.setEnabled(true);
+			        ok3_i.setEnabled(true);
+			        ok1_d.setEnabled(true);
+			        ok2_d.setEnabled(true);
 			        
              
           	}else {
