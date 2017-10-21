@@ -113,14 +113,38 @@ public class Panel_Trans extends JFrame implements ActionListener{
             
             case"finalizar transferencia":
                 
-                
                 if(validarDatos()){    
-              
+                	proyectoc2.panelArriba.panelCentro2.setVisible(false);
+                	proyectoc2.panelArriba.panelCentro7.setVisible(true);
+                	proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro7,BorderLayout.NORTH);
+			        	
+                proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).setsaldo((proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())-(Integer.parseInt(valortrans.getText().trim())));	
                 nombre.setText("                 ");
                 valortrans.setText("                 ");
-               
+                ncuenta.setText("                 ");
+                
                 this.setVisible(false);
-     
+               
+                
+                
+             
+		        JOptionPane.showMessageDialog(null,"su recibo");
+		        
+                try {
+             	   Thread.sleep(2000);
+                }catch(Exception e12 ) {
+             	   e12.printStackTrace();
+                }
+		        JOptionPane.showMessageDialog(null,"saldo restante: "+proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo());
+		        proyectoc2.panelArriba.panelCentro7.setVisible(false);
+		        proyectoc2.panelArriba.panelCentro2.setVisible(true);
+		        proyectoc2.panelArriba.panelCentro.add(proyectoc2.panelArriba.panelCentro2,BorderLayout.NORTH);
+		        proyectoc2.panelArriba.ok1_i.setEnabled(true);
+                proyectoc2.panelArriba.ok2_i.setEnabled(true);
+                proyectoc2.panelArriba.ok3_i.setEnabled(true);
+                proyectoc2.panelArriba.ok1_d.setEnabled(true);
+                proyectoc2.panelArriba.ok2_d.setEnabled(true);
+                proyectoc2.panelArriba.ok3_d.setEnabled(true);
                 }
                 
                 break;
@@ -130,9 +154,38 @@ public class Panel_Trans extends JFrame implements ActionListener{
         }
     public boolean validarDatos(){
         if(!ncuenta.getText().trim().equals("") && !nombre.getText().trim().equals("") && !valortrans.getText().trim().equals("")){
-            // validacion clave + campos 
-            
-    }else{
+		        	try{
+		                int icuenta = Integer.parseInt(ncuenta.getText().trim());
+		            }catch(Exception error){
+		                JOptionPane.showMessageDialog(null, "La cuenta no es valida!");
+		                return false;
+		            }
+		      	  int icuenta = Integer.parseInt(ncuenta.getText().trim());
+		      	  if(icuenta<=0) {
+		      		  JOptionPane.showMessageDialog(null, "La cuenta no es valida son valores positivos!");
+		      		  return false;
+		      	  }
+		      	  
+		      	try{
+	                int ivalortrans = Integer.parseInt(valortrans.getText().trim());
+	            }catch(Exception error){
+	                JOptionPane.showMessageDialog(null, "el valor no es valida!");
+	                return false;
+	            }
+	      	  int ivalortrans= Integer.parseInt(valortrans.getText().trim());
+	      	  if(ivalortrans<=0) {
+	      		  JOptionPane.showMessageDialog(null, "el valor no es valida son valores positivos!");
+	      		  return false;
+	      	  }else {
+	      		  if(ivalortrans>( proyectoc2.PanelCentro.l_personas.get(proyectoc2.PanelAbajo.encontro).getsaldo())) {
+	      			JOptionPane.showMessageDialog(null, "saldo insuficiente!");
+	      			return false;
+	      		  }
+	      	  }
+	      	  
+	      	  
+		      	  
+        	}else{
             JOptionPane.showMessageDialog(null, "llene todos los campos");
             return false;
         }

@@ -323,7 +323,8 @@ public class panelArriba extends JPanel implements ActionListener {
 			        	}
 			        }
 			        proyectoc2.PanelAbajo.bandera_ok=0;
-			        
+			        panelCentro2.setVisible(false);
+			        panelCentro.add(panelCentro3,BorderLayout.NORTH);
 			        
 			        
                
@@ -335,9 +336,23 @@ public class panelArriba extends JPanel implements ActionListener {
             break;
             
             case "ok3":
-            	if(ban==1) {          	   
+            	if(ban==1) {
+            		ok1_i.setEnabled(false);
+			        ok2_i.setEnabled(false);
+			        ok3_i.setEnabled(false);
+			        ok1_d.setEnabled(false);
+			        ok2_d.setEnabled(false);
+			        ok3_d.setEnabled(false);
             		Panel_Trans objeto3=new Panel_Trans();
                     objeto3.setVisible(true);
+                    /*
+                   try {
+                	   Thread.sleep(5000);
+                   }catch(Exception e12 ) {
+                	   e12.printStackTrace();
+                   }*/
+
+                    
             	}else {
             		  if(ban==2) {
             			  retiros=200000;
